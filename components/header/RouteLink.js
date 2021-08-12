@@ -6,7 +6,7 @@ import colors from '../../styles/colors';
 const useStyles = makeStyles(() => ({
   link: {
     fontSize: '30px',
-    fontFamily: 'Poiret One',
+    fontFamily: 'Josefin Slab',
     fontWeight: '500',
     transition: 'font-size 0.3s ease-in, color 0.3s ease-in',
     margin: '0 10px',
@@ -25,8 +25,6 @@ const useStyles = makeStyles(() => ({
   activeUnderline: {
     width: '100%',
   },
-
-  container: {},
 }));
 
 export default function RouteLink(props) {
@@ -38,7 +36,7 @@ export default function RouteLink(props) {
     router.pathname === props.href ? ` ${styles.activeUnderline}` : '';
 
   return (
-    <div className='container'>
+    <div>
       <Link href={props.href}>
         <a className={`${styles.link}${active}`}>{props.children}</a>
       </Link>

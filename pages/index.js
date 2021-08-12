@@ -1,34 +1,64 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Grid } from '@material-ui/core';
 import { MainLayout } from '../layouts';
-import { useState } from 'react';
 import Image from 'next/image';
-import { MainButton } from '../components/buttons';
+import { Border } from '../components/global';
+import interior from '../public/interior.png';
+import cheers from '../public/cheers.png';
+import pastries from '../public/pastries.png';
 
 const useStyles = makeStyles(() => ({
-  top: {
-    height: '100vh',
-    position: 'relative',
-    zIndex: 1,
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
-  image: {
-    position: 'absolute',
-    top: -200,
-    zIndex: -1,
-    opacity: 1,
-    filter: 'brightness(80%)',
-    transition: 'opacity 0.3s ease-in',
+  header: {
+    marginBottom: '40px',
   },
-  hidden: {
-    opacity: 0,
-    position: 'absolute',
-    top: -200,
-    zIndex: -1,
+
+  imageContainer: {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center',
+  },
+
+  smallImages: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '20px',
+  },
+
+  yeet: {
+    marginRight: '20px',
   },
 }));
 
 export default function Home() {
-  const [loaded, setLoaded] = useState(false);
   const styles = useStyles();
-
-  return <MainLayout></MainLayout>;
+  return (
+    <MainLayout>
+      <div className={styles.root}>
+        <Typography variant='h3' className={styles.header}>
+          Come have a cup with us
+        </Typography>
+        <Border width='800px' maxWidth='80%' marginBottom='15px' />
+        <Border width='800px' maxWidth='80%' marginBottom='50px' />
+        <Grid container justifyContent='center' spacing={4}>
+          <Grid item>
+            <Image src={interior} />
+          </Grid>
+          <Grid item>
+            <Grid container direction='column' spacing={2}>
+              <Grid item>
+                <Image src={pastries} />
+              </Grid>
+              <Grid item>
+                <Image src={cheers} />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </div>
+    </MainLayout>
+  );
 }
