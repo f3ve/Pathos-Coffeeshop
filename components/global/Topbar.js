@@ -8,8 +8,9 @@ const useStyle = makeStyles(() => ({
   nav: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: '100%',
+    justifyContent: 'space-between',
+    width: '600px',
+    maxWidth: '100%',
   },
 }));
 
@@ -19,13 +20,13 @@ export default function Topbar() {
   return (
     <AppBar color='transparent' className={styles.appBar} position='static'>
       <Toolbar>
-        <Logo style={{ width: '50%' }} />
+        <Logo />
+        <div style={{ width: '100%' }}></div>
         <nav className={styles.nav}>
           <RouteLink href='/menu'>Menu</RouteLink>
           <RouteLink href='/location'>Location</RouteLink>
           <RouteLink href='/ourstory'>Our Story</RouteLink>
         </nav>
-        <div style={{ width: '50%' }} />
       </Toolbar>
     </AppBar>
   );

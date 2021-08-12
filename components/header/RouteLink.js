@@ -1,30 +1,48 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { makeStyles } from '@material-ui/core';
+import colors from '../../styles/colors';
 
-const useSyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   link: {
-    fontSize: '50px',
-    fontFamily: 'Poiret One',
-    fontWeight: '500',
-    transition: 'font-size 0.3s ease-in',
-  },
-  smLink: {
     fontSize: '30px',
     fontFamily: 'Poiret One',
     fontWeight: '500',
-    transition: 'font-size 0.3s ease-in',
+    transition: 'font-size 0.3s ease-in, color 0.3s ease-in',
+    margin: '0 10px',
   },
+
+  active: {
+    color: colors.primary,
+  },
+
+  underline: {
+    width: 0,
+    borderBottom: `2px solid ${colors.primary}`,
+    transition: 'width 0.3s',
+  },
+
+  activeUnderline: {
+    width: '100%',
+  },
+
+  container: {},
 }));
 
 export default function RouteLink(props) {
-  const style = useSyles();
+  const styles = useStyles();
   const router = useRouter();
-  const className = router.pathname === '/' ? style.link : style.smLink;
+
+  const active = router.pathname === props.href ? ` ${styles.active}` : '';
+  const activeUnderline =
+    router.pathname === props.href ? ` ${styles.activeUnderline}` : '';
 
   return (
-    <Link href={props.href}>
-      <a className={className}>{props.children}</a>
-    </Link>
+    <div className='container'>
+      <Link href={props.href}>
+        <a className={`${styles.link}${active}`}>{props.children}</a>
+      </Link>
+      <div className={`${styles.underline}${activeUnderline}`} />
+    </div>
   );
 }
