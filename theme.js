@@ -1,7 +1,9 @@
-import {createTheme} from "@material-ui/core";
+import { createTheme } from '@material-ui/core/styles';
 
-export default function theme(mode) {
-    return createTheme( {
-        type: mode || 'light'
-    })
+export default function theme() {
+  return createTheme({
+    palette: {
+      type: 'light',
+    },
+  });
 }

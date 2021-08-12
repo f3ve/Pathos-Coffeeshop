@@ -1,26 +1,75 @@
-import {AppBar, Button, Slide, Toolbar, useScrollTrigger} from "@material-ui/core";
+import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function HideOnScroll({children}) {
-  const trigger = useScrollTrigger({disableHysteresis: true, threshold: 1000})
-  return (
-    <Slide appear={false} direction={"down"} in={trigger}>
-      {children}
-    </Slide>
-  )
-}
+const useStyle = makeStyles(() => ({
+  appBar: {
+    boxShadow: 'none',
+  },
+  nav: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: '100%',
+  },
+  link: {
+    fontSize: '50px',
+    fontFamily: 'Poiret One',
+    fontWeight: '500',
+    transition: 'all 0.3s',
+  },
+  smaller: {
+    fontSize: '30px',
+    fontFamily: 'Poiret One',
+    fontWeight: '500',
+    transition: 'all 0.3s',
+  },
+}));
 
-export default function Topbar(props) {
+export default function Topbar() {
+  const styles = useStyle();
+  const router = useRouter();
+
   return (
-      <HideOnScroll {...props}>
-        <AppBar>
-          <Toolbar>
-              <Button href="#home">Home</Button>
-              <Button href="#about">About us</Button>
-              <Button href="#menu">Menu</Button>
-              <Button href="#contact">Contact us</Button>
-              <Button href="https://www.google.com/maps/dir//New+York,+NY/@40.6974034,-74.1197632,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!2m2!1d-74.0059728!2d40.7127753" target="_blank" rel="noopener">Get directions</Button>
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
-  )
+    <AppBar color='transparent' className={styles.appBar} position='static'>
+      <Toolbar>
+        <Link href='/'>
+          <a style={{ width: '50%' }}>
+            <Image
+              src='/logo.png'
+              alt='yeet'
+              width={router.pathname === '/' ? '200' : '100'}
+              height={router.pathname === '/' ? '200' : '100'}
+              className={styles.image}
+            />
+          </a>
+        </Link>
+        <nav className={styles.nav}>
+          <Link href='/menu'>
+            <a
+              className={router.pathname === '/' ? styles.link : styles.smaller}
+            >
+              Menu
+            </a>
+          </Link>
+          <Link href='/location'>
+            <a
+              className={router.pathname === '/' ? styles.link : styles.smaller}
+            >
+              Location
+            </a>
+          </Link>
+          <Link href='/ourstory'>
+            <a
+              className={router.pathname === '/' ? styles.link : styles.smaller}
+            >
+              Our Story
+            </a>
+          </Link>
+        </nav>
+        <div style={{ width: '50%' }}></div>
+      </Toolbar>
+    </AppBar>
+  );
 }

@@ -1,17 +1,16 @@
-import '../styles/globals.css'
-import '@fontsource/roboto'
-import theme from '../theme'
-import {ThemeProvider} from "@material-ui/core";
-import {useState} from "react";
+import '../styles/globals.css';
+import '@fontsource/roboto';
+import '@fontsource/poiret-one';
+import '@fontsource/josefin-slab';
+import theme from '../theme';
+import { ThemeProvider } from '@material-ui/core';
 
 function MyApp({ Component, pageProps }) {
-  const [mode, setMode] = useState('light')
-
   return (
-    <ThemeProvider theme={theme(mode)}>
+    <ThemeProvider theme={theme()}>
       <Component {...pageProps} />
     </ThemeProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

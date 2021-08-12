@@ -74,6 +74,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/josefin-slab@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/josefin-slab/-/josefin-slab-4.5.0.tgz#d0c35450ffce1162bc732abb4a719d68fd8e17bf"
+  integrity sha512-taY2tJF9RHLzO8uB53XglR7C1zHsh4Gd48+9s0hGhIYkM2frkecjV67Gig2lknXifBvSwxPMA/2uP/6aP4T5YQ==
+
+"@fontsource/poiret-one@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/poiret-one/-/poiret-one-4.5.0.tgz#78ffaf68c07f8edf53dfa4dc2378c608940c7d08"
+  integrity sha512-Q4FW7ce2odhfM664wMiTC077WAZ1YmZBIYSNXEWKT/1TyHxcckqYeZN/hfRXu29Abd8jDmclmSU2VsokbUXs8A==
+
 "@fontsource/roboto@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.0.tgz#d6f925668ba6af46707f1040c43aff498ba204bb"

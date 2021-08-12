@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Josefin Slab' !important;
+  scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 a {
@@ -13,4 +14,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Poiret One' !important;
+}
+
+h2 {
+  font-family: 'Poiret One' !important;
+}
+
+h3 {
+  font-family: 'Poiret One' !important;
+}
+
+h4 {
+  font-family: 'Poiret One' !important;
+}
+
+h5 {
+  font-family: 'Poiret One' !important;
+}
+
+h6 {
+  font-family: 'Poiret One' !important;
 }

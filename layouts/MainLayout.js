@@ -1,11 +1,14 @@
-import {Topbar, Footer} from "../components/global";
+import { Topbar, Footer } from '../components/global';
+import { Fade } from '@material-ui/core';
 
-export default function MainLayout({children}) {
+export default function MainLayout({ children }) {
   return (
     <>
       <Topbar />
-      <main>{children}</main>
+      <Fade in>
+        <main>{children}</main>
+      </Fade>
       <Footer />
     </>
-  )
+  );
 }
