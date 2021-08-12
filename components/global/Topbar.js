@@ -1,7 +1,6 @@
 import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Logo, RouteLink } from '../header';
 
 const useStyle = makeStyles(() => ({
   appBar: {
@@ -13,62 +12,21 @@ const useStyle = makeStyles(() => ({
     justifyContent: 'space-evenly',
     width: '100%',
   },
-  link: {
-    fontSize: '50px',
-    fontFamily: 'Poiret One',
-    fontWeight: '500',
-    transition: 'all 0.3s',
-  },
-  smaller: {
-    fontSize: '30px',
-    fontFamily: 'Poiret One',
-    fontWeight: '500',
-    transition: 'all 0.3s',
-  },
 }));
 
 export default function Topbar() {
   const styles = useStyle();
-  const router = useRouter();
 
   return (
     <AppBar color='transparent' className={styles.appBar} position='static'>
       <Toolbar>
-        <Link href='/'>
-          <a style={{ width: '50%' }}>
-            <Image
-              src='/logo.png'
-              alt='yeet'
-              width={router.pathname === '/' ? '200' : '100'}
-              height={router.pathname === '/' ? '200' : '100'}
-              className={styles.image}
-            />
-          </a>
-        </Link>
+        <Logo style={{ width: '50%' }} />
         <nav className={styles.nav}>
-          <Link href='/menu'>
-            <a
-              className={router.pathname === '/' ? styles.link : styles.smaller}
-            >
-              Menu
-            </a>
-          </Link>
-          <Link href='/location'>
-            <a
-              className={router.pathname === '/' ? styles.link : styles.smaller}
-            >
-              Location
-            </a>
-          </Link>
-          <Link href='/ourstory'>
-            <a
-              className={router.pathname === '/' ? styles.link : styles.smaller}
-            >
-              Our Story
-            </a>
-          </Link>
+          <RouteLink href='/menu'>Menu</RouteLink>
+          <RouteLink href='/location'>Location</RouteLink>
+          <RouteLink href='/ourstory'>Our Story</RouteLink>
         </nav>
-        <div style={{ width: '50%' }}></div>
+        <div style={{ width: '50%' }} />
       </Toolbar>
     </AppBar>
   );

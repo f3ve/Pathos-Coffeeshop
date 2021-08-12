@@ -1,10 +1,9 @@
-import { Topbar, Footer } from '../components/global';
 import { Fade } from '@material-ui/core';
+import { Footer } from '../components/global';
 
 export default function MainLayout({ children }) {
   return (
     <>
-      <Topbar />
       <Fade in>
         <main>{children}</main>
       </Fade>
