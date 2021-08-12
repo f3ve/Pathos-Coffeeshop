@@ -1,5 +1,4 @@
 import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
-import { useRouter } from 'next/router';
 import { Logo, RouteLink } from '../header';
 
 const useStyle = makeStyles(() => ({
