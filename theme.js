@@ -9,6 +9,7 @@ export default function theme() {
       MuiTypography: {
         body1: {
           fontFamily: 'Josefin Slab',
+          whiteSpace: 'pre-line',
         },
         body2: {
           fontFamily: 'Josefine Slab',

@@ -1,4 +1,4 @@
-import { makeStyles, Typography, Grid } from '@material-ui/core';
+import { makeStyles, Typography, Grid, Container } from '@material-ui/core';
 import { MainLayout } from '../layouts';
 import Image from 'next/image';
 import { Border } from '../components/global';
@@ -37,7 +37,7 @@ export default function Home() {
   const styles = useStyles();
   return (
     <MainLayout>
-      <div className={styles.root}>
+      <Container className={styles.root} maxWidth='false'>
         <Typography variant='h3' className={styles.header}>
           Come have a cup with us
         </Typography>
@@ -58,7 +58,7 @@ export default function Home() {
             </Grid>
           </Grid>
         </Grid>
-      </div>
+      </Container>
     </MainLayout>
   );
 }
