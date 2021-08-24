@@ -10,7 +10,6 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     height: 400,
     border: 'none',
-    boxShadow: '0 2px 10px 3px lightgray',
   },
   contact: {
     marginBottom: 40,
