@@ -13,11 +13,11 @@ const theme = responsiveFontSizes(createMuiTheme());
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head>
-          <meta charSet="utf-8" />
+          <meta charSet='utf-8' />
           <meta
-            name="theme-color"
+            name='theme-color'
             content={
               theme.palette.type === 'dark'
                 ? theme.palette.background.dark
@@ -25,12 +25,12 @@ class MyDocument extends Document {
             }
           />
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons'
           />
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto+Condensed&display=swap"
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto+Condensed&display=swap'
           />
           <style jsx global>
             {`
@@ -49,8 +49,8 @@ class MyDocument extends Document {
                 font-size: 1rem;
                 margin: 0;
                 background-color: ${theme.palette.type === 'dark'
-              ? theme.palette.background.dark
-              : theme.palette.background.light};
+                  ? theme.palette.background.dark
+                  : theme.palette.background.light};
               }
               a {
                 color: inherit;
@@ -60,8 +60,8 @@ class MyDocument extends Document {
           </style>
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
@@ -83,7 +83,7 @@ MyDocument.getInitialProps = async (ctx) => {
     ...initialProps,
 
     styles: [
-      <React.Fragment key="styles">
+      <React.Fragment key='styles'>
         {initialProps.styles}
         {sheets.getStyleElement()}
       </React.Fragment>,

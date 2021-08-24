@@ -27,10 +27,6 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     marginLeft: '20px',
   },
-
-  yeet: {
-    marginRight: '20px',
-  },
 }));
 
 export default function Home() {
