@@ -5,5 +5,15 @@ export default function theme() {
     palette: {
       type: 'light',
     },
+    overrides: {
+      MuiTypography: {
+        body1: {
+          fontFamily: 'Josefin Slab',
+        },
+        body2: {
+          fontFamily: 'Josefine Slab',
+        },
+      },
+    },
   });
 }
