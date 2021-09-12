@@ -33,7 +33,7 @@ export default function Home() {
   const styles = useStyles();
   return (
     <MainLayout>
-      <Container className={styles.root} maxWidth='false'>
+      <Container className={styles.root} maxWidth='xl'>
         <Typography variant='h3' className={styles.header}>
           Come have a cup with us
         </Typography>
@@ -41,15 +41,15 @@ export default function Home() {
         <Border width='800px' maxWidth='80%' marginBottom='50px' />
         <Grid container justifyContent='center' spacing={4}>
           <Grid item>
-            <Image src={interior} />
+            <Image src={interior} alt='Interior' />
           </Grid>
           <Grid item>
             <Grid container direction='column' spacing={2}>
               <Grid item>
-                <Image src={pastries} />
+                <Image src={pastries} alt='Pastries' />
               </Grid>
               <Grid item>
-                <Image src={cheers} />
+                <Image src={cheers} alt='Cheers' />
               </Grid>
             </Grid>
           </Grid>

@@ -1,6 +1,13 @@
 import { Button } from '@material-ui/core';
+import { Props } from 'next/script';
 
-export default function MainButton(props) {
+interface MainButtonProps extends Props {
+  href: string;
+  className: string;
+  classes: object;
+}
+
+export default function MainButton(props: MainButtonProps) {
   return (
     <Button
       href={props.href}

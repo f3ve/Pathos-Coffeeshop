@@ -2,6 +2,11 @@ import { makeStyles } from '@material-ui/core';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
+import { Props } from 'next/script';
+
+interface LogoProps extends Props {
+  style?: object;
+}
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -10,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Logo({ style }) {
+export default function Logo({ style }: LogoProps) {
   const styles = useStyles();
 
   return (

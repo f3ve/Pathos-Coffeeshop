@@ -6,24 +6,15 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-
-const theme = responsiveFontSizes(createMuiTheme());
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
         <Head>
+          <title>Yeet</title>
           <meta charSet='utf-8' />
-          <meta
-            name='theme-color'
-            content={
-              theme.palette.type === 'dark'
-                ? theme.palette.background.dark
-                : theme.palette.background.light
-            }
-          />
+          <meta name='theme-color' content='#ffffff' />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons'
@@ -48,9 +39,7 @@ class MyDocument extends Document {
                 font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
                 font-size: 1rem;
                 margin: 0;
-                background-color: ${theme.palette.type === 'dark'
-                  ? theme.palette.background.dark
-                  : theme.palette.background.light};
+                background-color: #ffffff;
               }
               a {
                 color: inherit;

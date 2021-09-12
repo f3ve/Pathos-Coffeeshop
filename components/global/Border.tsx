@@ -1,5 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 import colors from '../../styles/colors';
+import { Props } from 'next/script';
+
+interface BorderProps extends Props {
+  width: string | number;
+  maxWidth: string | number;
+  marginBottom: string | number;
+}
 
 const useStyle = makeStyles(() => ({
   border: {
@@ -7,7 +14,7 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
-export default function Border({ width, maxWidth, marginBottom }) {
+export default function Border({ width, maxWidth, marginBottom }: BorderProps) {
   const styles = useStyle();
 
   return (

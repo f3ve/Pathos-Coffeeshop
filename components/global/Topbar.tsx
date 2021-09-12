@@ -21,7 +21,7 @@ export default function Topbar() {
     <AppBar color='transparent' className={styles.appBar} position='static'>
       <Toolbar>
         <Logo />
-        <div style={{ width: '100%' }}></div>
+        <div style={{ width: '100%' }} />
         <nav className={styles.nav}>
           <RouteLink href='/menu'>Menu</RouteLink>
           <RouteLink href='/location'>Location</RouteLink>
