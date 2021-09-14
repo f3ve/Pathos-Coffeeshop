@@ -15,6 +15,8 @@ const useStyles = makeStyles(() => ({
     transition: 'font-size 0.3s ease-in, color 0.3s ease-in',
     margin: '0 10px',
     color: colors.textDark,
+    wordWrap: 'unset',
+    whiteSpace: 'nowrap',
   },
 
   active: {

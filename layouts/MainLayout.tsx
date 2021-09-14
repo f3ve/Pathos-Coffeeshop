@@ -4,7 +4,7 @@ import { Props } from 'next/script';
 
 const useStyles = makeStyles(() => ({
   mainContainer: {
-    minHeight: '90vh',
+    minHeight: '100vh',
     paddingTop: 107,
   },
 
