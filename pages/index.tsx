@@ -1,10 +1,8 @@
+import Image from 'next/image';
 import { makeStyles, Typography, Grid, Container } from '@material-ui/core';
 import { MainLayout } from '../layouts';
-import Image from 'next/image';
 import { Border } from '../components/global';
-import interior from '../public/interior.png';
-import cheers from '../public/cheers.png';
-import pastries from '../public/pastries.png';
+import { interior, cheers, pastries } from '../public';
 
 const useStyles = makeStyles(() => ({
   root: {

@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../public/logo.png';
+import { logo } from '../../public';
 import { Props } from 'next/script';
 
 interface LogoProps extends Props {
