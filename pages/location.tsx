@@ -1,10 +1,11 @@
 import { MainLayout } from '../layouts';
 // import { useStyles } from '../hooks';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Border } from '../components/global';
 
 const useStyles = makeStyles(() => ({
   heading: {
-    marginBottom: 20,
+    // marginBottom: 20,
   },
   map: {
     width: '100%',
@@ -21,7 +22,7 @@ export default function Location() {
 
   const info = [
     {
-      header: 'Our Location',
+      header: 'Location',
       body: '1234, Lorem Ipsum st.\nLorem, IP 654321',
     },
     {
@@ -29,7 +30,7 @@ export default function Location() {
       body: 'Monday - Friday: 9am - 9pm\nSaturday: 11am - 9pm\nSunday: Closed',
     },
     {
-      header: 'Contact Us',
+      header: 'Contact',
       body: '(123) 456-7890\nexample@example.com',
     },
   ];
@@ -43,7 +44,7 @@ export default function Location() {
           className={classes.contact}
         >
           {info.map((item, index) => (
-            <Grid item key={`item-${index}`}>
+            <Grid item key={`item-${index}`} alignContent='center'>
               <Typography
                 variant='h3'
                 align='center'
@@ -51,6 +52,7 @@ export default function Location() {
               >
                 {item.header}
               </Typography>
+              <Border width={250} maxWidth={250} marginBottom={20} />
               <Typography variant='body1' align='center' gutterBottom>
                 {item.body}
               </Typography>

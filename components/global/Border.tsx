@@ -4,8 +4,8 @@ import { Props } from 'next/script';
 
 interface BorderProps extends Props {
   width: string | number;
-  maxWidth: string | number;
-  marginBottom: string | number;
+  maxWidth?: string | number;
+  marginBottom?: string | number;
 }
 
 const useStyle = makeStyles(() => ({
@@ -14,7 +14,11 @@ const useStyle = makeStyles(() => ({
   },
 }));
 
-export default function Border({ width, maxWidth, marginBottom }: BorderProps) {
+export default function Border({
+  width,
+  maxWidth = '100%',
+  marginBottom = 0,
+}: BorderProps) {
   const styles = useStyle();
 
   return (

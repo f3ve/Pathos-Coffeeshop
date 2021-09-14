@@ -4,3 +4,5 @@ export { default as pastries } from './pastries.png';
 export { default as logo } from './logo.png';
 export { default as croissants } from './croissants.jpg';
 export { default as sandwich } from './sandwich.jpg';
+export { default as barista } from './barista.jpg';
+export { default as cook } from './cook.jpg';
