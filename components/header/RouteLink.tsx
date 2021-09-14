@@ -10,6 +10,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: '500',
     transition: 'font-size 0.3s ease-in, color 0.3s ease-in',
     margin: '0 10px',
+    color: colors.textDark,
   },
 
   active: {
@@ -38,7 +39,7 @@ export default function RouteLink(props) {
   return (
     <div>
       <Link href={props.href}>
-        <a className={`${styles.link}${active}`}>{props.children}</a>
+        <a className={`${styles.link}${active} `}>{props.children}</a>
       </Link>
       <div className={`${styles.underline}${activeUnderline}`} />
     </div>

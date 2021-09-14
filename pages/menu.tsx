@@ -1,11 +1,12 @@
-import { Container, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { MainLayout } from '../layouts';
-import { PCarousel } from '../components/menuPage';
-import { interior, cheers, pastries, sandwich, croissants } from '../public';
+import { ImageCarousel, MenuItems } from '../components/menuPage';
+import { interior, cheers, sandwich, croissants } from '../public';
 
 const useStyles = makeStyles(() => ({
   carouselContainer: {
     height: 500,
+    marginBottom: 50,
   },
 }));
 
@@ -23,11 +24,6 @@ export default function Menu() {
       legend: 'Legend 2',
       alt: 'cheers',
     },
-    // {
-    //   src: pastries,
-    //   legend: 'Legend 3',
-    //   alt: 'Our pastries',
-    // },
     {
       src: sandwich,
       legend: 'Legend 4',
@@ -43,10 +39,9 @@ export default function Menu() {
   return (
     <MainLayout>
       <div className={styles.carouselContainer}>
-        <PCarousel images={images} />
+        <ImageCarousel images={images} priority={true} />
       </div>
-
-      <p>Menu</p>
+      <MenuItems />
     </MainLayout>
   );
 }

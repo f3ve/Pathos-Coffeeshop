@@ -13,6 +13,8 @@ interface CarouselProps extends Props {
   infiniteLoop?: boolean;
   height?: number;
   autoPlay?: boolean;
+  priority?: boolean;
+  quality?: number;
 }
 
 const useStyles = makeStyles(() => ({
@@ -29,6 +31,8 @@ export default function PCarousel({
   infiniteLoop = true,
   height = 500,
   autoPlay = true,
+  priority = false,
+  quality = 20,
 }: CarouselProps) {
   const styles = useStyles();
 
@@ -51,6 +55,8 @@ export default function PCarousel({
             objectFit='cover'
             objectPosition='center'
             className={styles.img}
+            quality={quality}
+            priority={priority}
           />
         </div>
       ))}
