@@ -3,7 +3,7 @@ export default [
     title: 'Starters',
     items: [
       {
-        name: 'Crabcakes',
+        name: 'Crab Cakes',
       },
       {
         name: 'Croissant',
@@ -52,7 +52,7 @@ export default [
       { name: 'Chocolate Cake' },
       { name: 'Crème Bruleé' },
       { name: 'Cheesecake' },
-      { name: 'Bread pudding' },
+      { name: 'Bread Pudding' },
     ],
   },
 ];
