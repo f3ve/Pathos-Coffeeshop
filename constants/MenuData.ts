@@ -9,10 +9,10 @@ export default [
         name: 'Croissant',
       },
       {
-        name: 'Bruscetta',
+        name: 'Bruschetta',
       },
       {
-        name: 'Spanacoptia',
+        name: 'Spanakopita',
       },
       {
         name: 'House Salad',
@@ -32,7 +32,7 @@ export default [
     title: 'Hot Drinks',
     items: [
       { name: 'Espresso' },
-      { name: 'Latte' },
+      { name: 'Latté' },
       { name: 'Americano' },
       { name: 'Mocha' },
     ],
@@ -42,7 +42,7 @@ export default [
     items: [
       { name: 'Iced Americano' },
       { name: 'Iced Mocha' },
-      { name: 'Iced Latte' },
+      { name: 'Iced Latté' },
       { name: 'Cold Brew' },
     ],
   },
@@ -50,7 +50,7 @@ export default [
     title: 'Desserts',
     items: [
       { name: 'Chocolate Cake' },
-      { name: 'Creme Brule' },
+      { name: 'Crème Bruleé' },
       { name: 'Cheesecake' },
       { name: 'Bread pudding' },
     ],
