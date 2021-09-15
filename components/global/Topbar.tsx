@@ -66,9 +66,13 @@ export default function Topbar() {
         </AppBar>
       </Slide>
       <Drawer anchor='top' open={open} onClose={() => toggleDrawer()}>
-        <RouteLink href='/menu'>Menu</RouteLink>
-        <RouteLink href='/location'>Location</RouteLink>
-        <RouteLink href='/ourstory' style={{ wordWrap: 'unset' }}>
+        <RouteLink href='/menu' border={false}>
+          Menu
+        </RouteLink>
+        <RouteLink href='/location' border={false}>
+          Location
+        </RouteLink>
+        <RouteLink href='/ourstory' border={false}>
           Our Story
         </RouteLink>
       </Drawer>

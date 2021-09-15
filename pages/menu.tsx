@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { MainLayout } from '../layouts';
 import { ImageCarousel, MenuItems } from '../components/menuPage';
-import { interior, cheers, sandwich, croissants } from '../public';
+import { interior, cheers, sandwich, croissants, pastries } from '../public';
 
 const useStyles = makeStyles(() => ({
   carouselContainer: {
@@ -33,6 +33,11 @@ export default function Menu() {
       src: croissants,
       legend: 'Legend 5',
       alt: 'Croissants',
+    },
+    {
+      src: pastries,
+      legend: 'legend 3',
+      alt: 'Pastries',
     },
   ];
 

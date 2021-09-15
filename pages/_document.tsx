@@ -12,7 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title>Yeet</title>
           <meta charSet='utf-8' />
           <meta name='theme-color' content='#ffffff' />
           <link

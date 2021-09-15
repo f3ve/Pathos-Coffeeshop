@@ -6,6 +6,7 @@ import { Props } from 'next/script';
 
 interface RouteLinkProps extends Props {
   href: string;
+  border?: boolean;
 }
 
 const useStyles = makeStyles(() => ({
@@ -34,7 +35,11 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function RouteLink({ href, children }: RouteLinkProps) {
+export default function RouteLink({
+  href,
+  children,
+  border = true,
+}: RouteLinkProps) {
   const styles = useStyles();
   const router = useRouter();
 
@@ -47,7 +52,7 @@ export default function RouteLink({ href, children }: RouteLinkProps) {
       <Link href={href}>
         <a className={`${styles.link}${active} `}>{children}</a>
       </Link>
-      <div className={`${styles.underline}${activeUnderline}`} />
+      {border && <div className={`${styles.underline}${activeUnderline}`} />}
     </div>
   );
 }

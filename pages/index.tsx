@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import { makeStyles, Typography, Grid, Container } from '@material-ui/core';
+import {
+  makeStyles,
+  Typography,
+  Grid,
+  Container,
+  useMediaQuery,
+} from '@material-ui/core';
 import { MainLayout } from '../layouts';
 import { Border } from '../components/global';
 import { interior, cheers, pastries } from '../public';
@@ -24,6 +30,10 @@ const useStyles = makeStyles(() => ({
     maxWidth: 500,
   },
 
+  smallScreen: {
+    maxWidth: 800,
+  },
+
   interiorImage: {
     maxWidth: 800,
   },
@@ -31,10 +41,17 @@ const useStyles = makeStyles(() => ({
 
 export default function Home() {
   const styles = useStyles();
+  const smallScreen = useMediaQuery('(max-width: 704px)');
+  const pictureWrap = useMediaQuery('(max-width: 1333px)');
+
   return (
     <MainLayout>
       <Container className={styles.root} maxWidth='xl'>
-        <Typography variant='h3' className={styles.header}>
+        <Typography
+          variant={smallScreen ? 'h4' : 'h3'}
+          className={styles.header}
+          align='center'
+        >
           Come have a cup with us
         </Typography>
         <Border width='800px' maxWidth='80%' marginBottom='15px' />
@@ -48,19 +65,26 @@ export default function Home() {
               container
               direction='column'
               spacing={2}
-              className={styles.smallImages}
+              className={pictureWrap ? styles.smallScreen : styles.smallImages}
             >
               <Grid item>
-                <Image src={pastries} alt='Pastries' quality={50} priority />
+                <Image
+                  priority
+                  src={pastries}
+                  alt='Pastries'
+                  height='1212'
+                  objectFit='cover'
+                  quality={50}
+                />
               </Grid>
               <Grid item style={{ position: 'relative' }}>
                 <Image
+                  priority
                   src={cheers}
                   alt='Cheers'
-                  height='1210'
+                  height='1212'
                   objectFit='cover'
                   quality={50}
-                  priority
                 />
               </Grid>
             </Grid>
