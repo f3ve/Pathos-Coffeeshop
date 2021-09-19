@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { MainLayout } from '../layouts';
 import { cook, barista } from '../public';
@@ -19,6 +20,9 @@ export default function OurStory() {
   const styles = useStyles();
   return (
     <MainLayout>
+      <Head>
+        <title>Pathos Coffeeshop | Our Story</title>
+      </Head>
       <Container>
         <Grid
           container

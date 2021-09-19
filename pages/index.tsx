@@ -49,6 +49,7 @@ export default function Home() {
     <MainLayout>
       <Head>
         <title>Pathos Coffeeshop</title>
+        <link rel='icon' href='/logo.png' />
       </Head>
       <Container
         className={styles.root}

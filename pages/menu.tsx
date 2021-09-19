@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { makeStyles } from '@material-ui/core';
 import { MainLayout } from '../layouts';
 import { ImageCarousel, MenuItems } from '../components/menuPage';
@@ -43,6 +44,7 @@ export default function Menu() {
 
   return (
     <MainLayout>
+      <Head>Pathos Coffeeshop | Menu</Head>
       <div className={styles.carouselContainer}>
         <ImageCarousel images={images} priority={true} />
       </div>

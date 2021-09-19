@@ -1,6 +1,7 @@
 import { MainLayout } from '../layouts';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { Border } from '../components/global';
+import Head from 'next/head';
 
 const useStyles = makeStyles(() => ({
   map: {
@@ -34,6 +35,9 @@ export default function Location() {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Pathos Coffeshop | Location</title>
+      </Head>
       <Container>
         <Grid
           container
