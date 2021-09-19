@@ -50,6 +50,38 @@ export default function Home() {
       <Head>
         <title>Pathos Coffeeshop</title>
         <link rel='icon' href='/logo.png' />
+        {/* Twitter meta tags */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Pathos Coffeeshop' />
+        <meta name='twitter:site' content='@f3veDev' />
+        <meta name='twitter:creator' content='@f3veDev' />
+        <meta
+          name='twitter:description'
+          content='Sample restaurant site built using TypeScript, NextJS, and Material-UI'
+        />
+        <meta
+          name='twitter:image'
+          content='https://pathos-coffeeshop.vercel.app/preview.png'
+        />
+        {/* End twitter meta tags */}
+
+        <meta
+          name='description'
+          content='Sample restaurant site built using TypeScript, NextJS, and Material-UI'
+        />
+        <meta
+          name='google-site-verification'
+          content='Lp9a1YPrBv963HrvdTAhuI1-nyyOZq1nNVRqA8lC1ao'
+        />
+        <meta
+          property='og:image'
+          content='https://pathos-coffeeshop.vercel.app/preview.png'
+        />
+        <meta property='og:title' content='Pathos Coffeeshop' />
+        <meta
+          property='og:description'
+          content='Sample restaurant site built using TypeScript, NextJS, and Material-UI'
+        />
       </Head>
       <Container
         className={styles.root}
