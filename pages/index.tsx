@@ -46,7 +46,11 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <Container className={styles.root} maxWidth='xl'>
+      <Container
+        className={styles.root}
+        maxWidth='xl'
+        style={{ marginBottom: pictureWrap ? 50 : 0 }}
+      >
         <Typography
           variant={smallScreen ? 'h4' : 'h3'}
           className={styles.header}

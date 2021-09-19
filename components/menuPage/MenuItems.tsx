@@ -19,7 +19,8 @@ export default function MenuItems() {
         wrap='wrap'
         direction='row'
         justifyContent='space-between'
-        spacing={10}
+        style={{ marginBottom: 50 }}
+        spacing={4}
       >
         {MenuData.map((section, index) => (
           <Grid item key={index} component='section'>

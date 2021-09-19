@@ -11,6 +11,7 @@ const useStyles = makeStyles(() => ({
     position: 'relative',
     marginTop: 40,
     boxShadow: '0 5px 10px gray',
+    marginBottom: 40,
   },
 }));
 
@@ -54,7 +55,7 @@ export default function OurStory() {
               Nam Sagittis
             </Typography>
             <Border width={'100%'} marginBottom={20} />
-            <Typography>
+            <Typography style={{ marginBottom: 50 }}>
               Nam sagittis elit sit amet nunc semper, et consequat eros maximus.
               Quisque dignissim metus sit amet odio rhoncus dictum. Donec
               vestibulum augue a nulla fringilla, feugiat convallis odio tempus.
