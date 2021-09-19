@@ -1,16 +1,13 @@
 import { MainLayout } from '../layouts';
-// import { useStyles } from '../hooks';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { Border } from '../components/global';
 
 const useStyles = makeStyles(() => ({
-  heading: {
-    // marginBottom: 20,
-  },
   map: {
     width: '100%',
     height: 400,
     border: 'none',
+    marginBottom: 50,
   },
   contact: {
     marginBottom: 40,
@@ -45,11 +42,7 @@ export default function Location() {
         >
           {info.map((item, index) => (
             <Grid item key={`item-${index}`} alignContent='center'>
-              <Typography
-                variant='h3'
-                align='center'
-                className={classes.heading}
-              >
+              <Typography variant='h3' align='center'>
                 {item.header}
               </Typography>
               <Border width={250} maxWidth={250} marginBottom={20} />

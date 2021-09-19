@@ -45,6 +45,7 @@ export default function PCarousel({
       infiniteLoop={infiniteLoop}
       centerSlidePercentage={65}
       autoPlay={autoPlay}
+      showThumbs={false}
     >
       {images.map((image, index) => (
         <div key={index} style={{ height, position: 'relative' }}>
@@ -57,6 +58,7 @@ export default function PCarousel({
             className={styles.img}
             quality={quality}
             priority={priority}
+            placeholder='blur'
           />
         </div>
       ))}

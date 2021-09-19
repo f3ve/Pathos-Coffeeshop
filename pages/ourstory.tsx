@@ -28,7 +28,13 @@ export default function OurStory() {
           wrap='wrap'
         >
           <Grid item className={styles.imageContainer}>
-            <Image src={cook} layout='fill' objectFit='cover' priority />
+            <Image
+              src={cook}
+              layout='fill'
+              objectFit='cover'
+              priority
+              placeholder='blur'
+            />
           </Grid>
           <Grid item md={6}>
             <Typography variant='h4' gutterBottom>
@@ -69,7 +75,13 @@ export default function OurStory() {
             </Typography>
           </Grid>
           <Grid item className={styles.imageContainer}>
-            <Image src={barista} layout='fill' objectFit='cover' priority />
+            <Image
+              src={barista}
+              layout='fill'
+              objectFit='cover'
+              priority
+              placeholder='blur'
+            />
           </Grid>
         </Grid>
       </Container>

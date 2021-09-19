@@ -9,6 +9,7 @@ import {
 import { MainLayout } from '../layouts';
 import { Border } from '../components/global';
 import { interior, cheers, pastries } from '../public';
+import Head from 'next/head';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -46,6 +47,9 @@ export default function Home() {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Pathos Coffeeshop</title>
+      </Head>
       <Container
         className={styles.root}
         maxWidth='xl'
@@ -62,7 +66,13 @@ export default function Home() {
         <Border width='800px' maxWidth='80%' marginBottom='50px' />
         <Grid container justifyContent='center' spacing={4}>
           <Grid item className={styles.interiorImage}>
-            <Image src={interior} alt='Interior' quality={50} priority />
+            <Image
+              src={interior}
+              alt='Interior'
+              quality={50}
+              priority
+              placeholder='blur'
+            />
           </Grid>
           <Grid item>
             <Grid
@@ -79,6 +89,7 @@ export default function Home() {
                   height='1212'
                   objectFit='cover'
                   quality={50}
+                  placeholder='blur'
                 />
               </Grid>
               <Grid item style={{ position: 'relative' }}>
@@ -89,6 +100,7 @@ export default function Home() {
                   height='1212'
                   objectFit='cover'
                   quality={50}
+                  placeholder='blur'
                 />
               </Grid>
             </Grid>
