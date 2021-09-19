@@ -44,7 +44,9 @@ export default function Menu() {
 
   return (
     <MainLayout>
-      <Head>Pathos Coffeeshop | Menu</Head>
+      <Head>
+        <title>Pathos Coffeeshop | Menu</title>
+      </Head>
       <div className={styles.carouselContainer}>
         <ImageCarousel images={images} priority={true} />
       </div>
