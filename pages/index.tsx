@@ -17,6 +17,7 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
+
   header: {
     marginBottom: '40px',
   },
@@ -85,7 +86,7 @@ export default function Home() {
       </Head>
       <Container
         className={styles.root}
-        maxWidth='xl'
+        maxWidth='lg'
         style={{ marginBottom: pictureWrap ? 50 : 0 }}
       >
         <Typography
@@ -98,7 +99,7 @@ export default function Home() {
         <Border width='800px' maxWidth='80%' marginBottom='15px' />
         <Border width='800px' maxWidth='80%' marginBottom='50px' />
         <Grid container justifyContent='center' spacing={4}>
-          <Grid item className={styles.interiorImage}>
+          <Grid item className={styles.interiorImage} xs={12} md={6}>
             <Image
               src={interior}
               alt='Interior'
@@ -107,19 +108,20 @@ export default function Home() {
               placeholder='blur'
             />
           </Grid>
-          <Grid item>
+          <Grid item xs={12} md={4}>
             <Grid
               container
               direction='column'
-              spacing={2}
               className={pictureWrap ? styles.smallScreen : styles.smallImages}
+              justifyContent='space-between'
+              spacing={1}
             >
               <Grid item>
                 <Image
                   priority
                   src={pastries}
                   alt='Pastries'
-                  height='1212'
+                  height='1190'
                   objectFit='cover'
                   quality={50}
                   placeholder='blur'
@@ -130,7 +132,7 @@ export default function Home() {
                   priority
                   src={cheers}
                   alt='Cheers'
-                  height='1212'
+                  height='1190'
                   objectFit='cover'
                   quality={50}
                   placeholder='blur'
