@@ -9,7 +9,6 @@ import * as React from 'react';
 import { Logo, MobileDropdown, NavLinks } from '../header';
 
 interface Props {
-  window?: () => Window;
   children: React.ReactElement;
 }
 
@@ -31,14 +30,13 @@ function ElevationScroll(props: Props) {
   });
 }
 
-export default function Topbar(props: Props) {
+export default function Topbar() {
   const styles = useStyle();
   const smallScreen = useMediaQuery('(max-width: 600px)');
 
   return (
     <>
-      {/*<Slide appear={false} direction='down' in={!trigger}>*/}
-      <ElevationScroll {...props}>
+      <ElevationScroll>
         <AppBar className={styles.appBar} position='fixed'>
           <Toolbar>
             <Logo />
@@ -47,7 +45,6 @@ export default function Topbar(props: Props) {
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-      {/*</Slide>*/}
     </>
   );
 }
