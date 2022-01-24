@@ -1,7 +1,6 @@
 import {
   AppBar,
   makeStyles,
-  Slide,
   Toolbar,
   useMediaQuery,
   useScrollTrigger,
@@ -10,17 +9,12 @@ import * as React from 'react';
 import { Logo, MobileDropdown, NavLinks } from '../header';
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
   children: React.ReactElement;
 }
 
 const useStyle = makeStyles(() => ({
   appBar: {
-    // boxShadow: 'none',
     backgroundColor: 'white',
   },
 }));
